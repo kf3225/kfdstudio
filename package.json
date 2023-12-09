@@ -1,0 +1,20 @@
+{
+  "name": "kfdstudio",
+  "private": true,
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "turbo": "^1.11.1",
+    "wrangler": "^3.19.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "workspaces": [
+    "workers/*"
+  ]
+}
