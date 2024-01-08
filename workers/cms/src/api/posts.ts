@@ -22,13 +22,6 @@ postApi.post("/", zValidator("json", postSchema), async (c) => {
   return generateResponse(c, res);
 });
 
-postApi.get("/", async (c) => {
-  const tags = c.req.queries("tags");
-  const getPost = tags ? getPostsByTag : getAllPosts;
-  const res = await getPost(c);
-  return generateResponse(c, res);
-});
-
 postApi.get("/:id", async (c) => {
   const res = await getPostById(c);
   return generateResponse(c, res);
@@ -36,6 +29,13 @@ postApi.get("/:id", async (c) => {
 
 postApi.get("/:year/:month/:day", async (c) => {
   const res = await getPostsByEntry(c);
+  return generateResponse(c, res);
+});
+
+postApi.get("*", async (c) => {
+  const tags = c.req.queries("tags");
+  const getPost = tags ? getPostsByTag : getAllPosts;
+  const res = await getPost(c);
   return generateResponse(c, res);
 });
 

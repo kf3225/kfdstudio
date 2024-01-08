@@ -1,10 +1,11 @@
 {
   "name": "kfdstudio",
   "private": true,
-  "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "turbo dev"
+    "dev": "bunx turbo run dev",
+    "build": "bunx turbo run build",
+    "deploy": "bunx turbo run deploy"
   },
   "devDependencies": {
     "bun-types": "latest",

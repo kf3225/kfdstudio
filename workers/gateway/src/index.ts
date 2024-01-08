@@ -1,7 +1,20 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
 
-const app = new Hono()
+type Bindings = {
+  BLOG_SERVICE: Fetcher;
+  CMS_SERVICE: Fetcher;
+};
 
-app.get('/', (c) => c.text('Hello Hono!'))
+const app = new Hono<{ Bindings: Bindings }>();
 
-export default app
+app.all("/blog/*", async (c) => {
+  const res = await c.env.BLOG_SERVICE.fetch(c.req.raw);
+  return res;
+});
+app.all("/cms/*", async (c) => {
+  const res = await c.env.CMS_SERVICE.fetch(c.req.raw);
+  return res;
+});
+app.all("/", (c) => c.text("Hello Hono!"));
+
+export default app;

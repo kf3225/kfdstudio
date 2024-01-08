@@ -1,8 +1,10 @@
 name = "gateway"
-compatibility_date = "2023-01-01"
+compatibility_date = "2023-09-04"
 
-[dev]
-port = 3000
+services = [
+  { binding = "BLOG_SERVICE", service = "blog" },
+  { binding = "CMS_SERVICE", service = "cms" },
+]
 # [vars]
 # MY_VARIABLE = "production_value"
 

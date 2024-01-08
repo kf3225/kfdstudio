@@ -1,20 +1,12 @@
 name = "blog"
-compatibility_date = "2023-01-01"
 
-[dev]
-port = 3001
-# [vars]
-# MY_VARIABLE = "production_value"
+workers_dev = false
+main = "./build/index.js"
+# https://developers.cloudflare.com/workers/platform/compatibility-dates
+compatibility_date = "2023-09-04"
 
-# [[kv_namespaces]]
-# binding = "MY_KV_NAMESPACE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+[site]
+bucket = "./public"
 
-# [[r2_buckets]]
-# binding = "MY_BUCKET"
-# bucket_name = "my-bucket"
-
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "my-database"
-# database_id = ""
+[build]
+command = "bun run build"

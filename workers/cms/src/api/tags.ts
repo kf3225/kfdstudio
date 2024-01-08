@@ -22,15 +22,15 @@ tagApi.post("/:name", zValidator("json", tagSchema), async (c) => {
   return generateResponse(c, { [tagName]: res });
 });
 
-tagApi.get("/", async (c) => {
-  const res = await getAllTags(c);
-  return generateResponse(c, res);
-});
-
 tagApi.get("/:name", async (c) => {
   const tag = await getTagByName(c);
   const tagName = c.req.param("name");
   const res = tag ? { [tagName]: tag } : null;
+  return generateResponse(c, res);
+});
+
+tagApi.get("*", async (c) => {
+  const res = await getAllTags(c);
   return generateResponse(c, res);
 });
 

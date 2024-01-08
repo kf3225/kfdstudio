@@ -3,6 +3,13 @@
   "pipeline": {
     "dev": {
       "dependsOn": ["^dev"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["public", "build"]
+    },
+    "deploy": {
+      "dependsOn": ["^deploy"]
     }
   }
 }
