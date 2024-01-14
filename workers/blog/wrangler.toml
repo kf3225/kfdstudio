@@ -5,6 +5,9 @@ main = "./build/index.js"
 # https://developers.cloudflare.com/workers/platform/compatibility-dates
 compatibility_date = "2023-09-04"
 
+[dev]
+port = 3002
+
 [site]
 bucket = "./public"
 

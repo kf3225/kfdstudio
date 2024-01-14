@@ -1,6 +1,9 @@
 name = "gateway"
 compatibility_date = "2023-09-04"
 
+[dev]
+port = 8001
+
 services = [
   { binding = "BLOG_SERVICE", service = "blog" },
   { binding = "CMS_SERVICE", service = "cms" },

@@ -12,7 +12,8 @@ export default {
   serverModuleFormat: "esm",
   serverPlatform: "neutral",
   // appDirectory: "app",
-  // assetsBuildDirectory: "public/build",
-  // publicPath: "/build/",
+  assetsBuildDirectory: "public/blog/build",
+  publicPath: "/blog/build/",
   // serverBuildPath: "build/index.js",
+  devServerPort: 8002
 };

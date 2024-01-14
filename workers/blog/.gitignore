@@ -3,5 +3,5 @@ node_modules
 /.cache
 /.wrangler
 /build
-/public/build
+/public/blog/build
 .env
