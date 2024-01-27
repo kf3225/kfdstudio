@@ -1,20 +1,23 @@
 {
-  "name": "cms",
-  "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts",
-    "test": "bun test"
-  },
-  "dependencies": {
-    "@hono/zod-validator": "^0.1.11",
-    "dayjs": "^1.11.10",
-    "hono": "^3.11.11",
-    "zod": "^3.22.4"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20231218.0",
-    "@types/uuid": "^9.0.7",
-    "bun-types": "^1.0.21",
-    "wrangler": "^3.22.0"
-  }
+	"name": "cms",
+	"scripts": {
+		"dev": "wrangler dev src/index.ts",
+		"deploy": "wrangler deploy --minify src/index.ts",
+		"lint": "biome lint src",
+		"format": "biome lint --apply src && biome format --write src",
+		"test": "bun test"
+	},
+	"dependencies": {
+		"@hono/zod-validator": "^0.1.11",
+		"dayjs": "^1.11.10",
+		"hono": "^3.11.11",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@cloudflare/workers-types": "^4.20231218.0",
+		"@types/uuid": "^9.0.7",
+		"bun-types": "^1.0.21",
+		"wrangler": "^3.22.0"
+	}
 }

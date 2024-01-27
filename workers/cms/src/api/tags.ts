@@ -7,7 +7,7 @@ import { tagSchema } from "../schema";
 import {
   createTag,
   deleteAllTags,
-  deleteTagByName as deleteTagByName,
+  deleteTagByName,
   getAllTags,
   getTagByName,
   updateTagByName,

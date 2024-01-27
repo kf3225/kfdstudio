@@ -1,14 +1,16 @@
 {
-  "name": "gateway",
-  "scripts": {
-    "dev": "bun run wrangler dev src/index.ts",
-    "deploy": "bun run wrangler deploy --minify src/index.ts"
-  },
-  "dependencies": {
-    "hono": "^3.11.4"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20230914.0",
-    "wrangler": "^3.15.0"
-  }
+	"name": "gateway",
+	"scripts": {
+		"dev": "bun run wrangler dev src/index.ts",
+		"deploy": "bun run wrangler deploy --minify src/index.ts",
+		"lint": "biome lint src",
+		"format": "biome lint --apply src && biome format --write src"
+	},
+	"dependencies": {
+		"hono": "^3.11.4"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20230914.0",
+		"wrangler": "^3.15.0"
+	}
 }

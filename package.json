@@ -1,21 +1,21 @@
 {
-  "name": "kfdstudio",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "bunx turbo run dev",
-    "build": "bunx turbo run build",
-    "deploy": "bunx turbo run deploy"
-  },
-  "devDependencies": {
-    "bun-types": "latest",
-    "turbo": "^1.11.1",
-    "wrangler": "^3.19.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "workspaces": [
-    "workers/*"
-  ]
+	"name": "kfdstudio",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "bunx turbo run dev",
+		"build": "bunx turbo run build",
+		"deploy": "bunx turbo run deploy",
+		"lint": "bunx turbo run lint",
+		"format": "bunx turbo run format"
+	},
+	"devDependencies": {
+		"bun-types": "latest",
+		"turbo": "^1.11.1",
+		"wrangler": "^3.19.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"workspaces": ["workers/*"]
 }

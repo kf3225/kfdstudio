@@ -8,6 +8,15 @@ compatibility_date = "2023-09-04"
 [dev]
 port = 3002
 
+[env.development.vars]
+CMS_API_HOST = "localhost"
+CMS_API_PORT = 8003
+
+[env.production.vars]
+CMS_API_HOST = "kfdstudio.work"
+CMS_API_PORT = 8003
+
+
 [site]
 bucket = "./public"
 
