@@ -1,5 +1,5 @@
+import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
-import { LoaderFunctionArgs, json } from "@remix-run/cloudflare";
 
 interface Env {
 	CMS_API_HOST?: string;
